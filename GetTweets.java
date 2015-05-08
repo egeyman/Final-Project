@@ -41,7 +41,6 @@ public class GetTweets
       int totalTweets = 500;
       ArrayList<Status> tweetList = new ArrayList<Status>(); //Status is an interface--it represents one single user status
       
-      //
       while (tweetList.size() < totalTweets)
       {
          //the max number of tweets you can return per page is 100:
