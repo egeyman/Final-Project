@@ -13,10 +13,8 @@
 //Use methods "until" and "since" etc to narrow search results of tweets to within a given window of time
 //http://twitter4j.org/javadoc/index.html
 
-//package twiter;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import twitter4j.GeoLocation;
 import twitter4j.Query;
 import twitter4j.QueryResult;
@@ -33,10 +31,10 @@ public class GetTweetsFirstTry
       ConfigurationBuilder cb = new ConfigurationBuilder();
       cb.setDebugEnabled(true);
       //These are the keys I got by setting up an account and registering on Twitter's API website:
-      cb.setOAuthConsumerKey("se9FH9ANnGXz6AdCXOtXp7KHw");
-      cb.setOAuthConsumerSecret("SYxH5a3Ea89Q0wlRpoBaF0B1WQaHeaP7zYGV9UPiGlHbbDxtku");
-      cb.setOAuthAccessToken("3185612070-j4It4chg8dwVDzzSxzuD2yCOAwAbZpY2KqzOe3A");
-      cb.setOAuthAccessTokenSecret("gE51nrZi2f14mln3nV7CXORaSkle96V42zOl8jdc1RPmw");
+      cb.setOAuthConsumerKey("oRIGU4t4UH03ud0pjzWiGC0y0");
+      cb.setOAuthConsumerSecret("zA5nxloU9yxcnnKbB7hgA9JIEcsBWFAD1OoMIDI3zgEIsxDCTk");
+      cb.setOAuthAccessToken("3185612070-av4UD2wbyONwKYDh9WOfxmHttfY3ICEZnMV0612");
+      cb.setOAuthAccessTokenSecret("eTdSz9GHZwa5Ud4BJzkuDKfh9FWBmEsXAvmR2tUp7Mbls");
       Twitter twitter = new TwitterFactory(cb.build()).getInstance();
       Query query = new Query("#food");
       int numberOfTweets = 5000;

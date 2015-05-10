@@ -2,7 +2,7 @@
 //Final Project - Part 1
 //This program uses twitter4j (a library for the Twitter API) to scrape tweets
 //
-//GetTweets.java
+//GetTweetsSecondTry.java
 //Version 1.0
 //May 5, 2014
 
@@ -11,6 +11,7 @@
 
 //Javadoc for twitter4j: http://twitter4j.org/javadoc/index.html
 
+package twitter4j;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.*;
 
-public class GetTweets
+public class GetTweetsSecondTry
 {
    public static void main(String[] args)
    {
@@ -38,9 +39,7 @@ public class GetTweets
       Twitter twitter = new TwitterFactory(cb.build()).getInstance();
       
       //Query query = new Query().geoCode(new GeoLocation(39.8282, -98.5795), 3000.0, "Query.MILES"); //lat lon is geographic center of U.S.
-      //Query query = new Query().lang("en");
-      Query query = new Query("soccer");
-      query.setLang("en");
+      Query query = new Query().lang("en");
 //       query.setSince("2015-05-06");
 //       query.setUntil("2015-05-07");
       
@@ -48,7 +47,7 @@ public class GetTweets
       long lastID = Long.MAX_VALUE;
       ArrayList<Status> tweetList = new ArrayList<Status>(); //Status is an interface--it represents one single user status
       
-      //FileWriter fileWriter = null;
+      FileWriter fileWriter = null;
       
       while (tweetList.size() < totalTweets)
       {
@@ -85,10 +84,6 @@ public class GetTweets
 //                      fileWriter.append(",");
 //                      fileWriter.append(msg);
 //                      fileWriter.append("\n");
-                  }
-                  else
-                  {
-                     System.out.println("Status: " + msg + "\n");
                   }
                }
             }
